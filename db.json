@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userType": "employee",
+      "loginType": "kakao",
+      "email": "wsg0701@naver.com",
+      "name": "우상규",
+      "company": "",
+      "phone": "010-8480-2790",
+      "address": "서울시 관악구"
+    },
+    {
+      "id": 2,
+      "userType": "employee",
+      "loginType": "kakao",
+      "email": "happywhn3@gmail.com",
+      "name": "우수림",
+      "company": "",
+      "phone": "010-8480-2790",
+      "address": "서울시 강남구"
+    },
+    {
+      "id": 3,
+      "userType": "employer",
+      "loginType": "naver",
+      "email": "sunshine@gmail.com",
+      "name": "우햇살",
+      "company": "햇살 어린이집",
+      "phone": "010-8480-2790",
+      "address": "서울시 강남구"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "25년 연장반 보육교사 채용",
+      "name": "햇살 어린이집",
+      "endAt": "",
+      "workingDate": {
+        "start": "15:00",
+        "end": "19:00"
+      },
+      "location": {
+        "id": 1,
+        "name": "서울시 강남구"
+      },
+      "address": "강남구 보건소근처",
+      "type": {
+        "employment": "substitute",
+        "institution": "daycare"
+      },
+      "phone": "010-8480-2790",
+      "email": "sunshine@gmail.com",
+      "career": "experienced",
+      "salary": "협의",
+      "description": "연장반 보육교사를 모집합니다.\n1.연장반 교사 : .지원자격 - 보육교사 2급이상 (보육, 아동관련학과 졸업자/유치원정교사)\n.근무조건 :  15시-19시\n.급여조건 : 보육사업지침 준용\n2. 지원방법 : 이력서\n. 제출방법: 이메일접수 ( happywhn3@gmail.com )\n. 서류합격자에 한해 개별통보 후 면접이 진행됩니다.\n. 기타 필요서류는 면접 후 최종 확정 후 제출\n3. 문 의   : 010-8480-2790\n4. 원위치 : 강남구 보건소근처"
+    },
+    {
+      "id": 2,
+      "title": "25년 햇살 어린이집 정교사 채용",
+      "name": "햇살 어린이집",
+      "endAt": "",
+      "workingDate": {
+        "start": "08:00",
+        "end": "17:00"
+      },
+      "location": {
+        "id": 2,
+        "name": "서울시 성동구"
+      },
+      "address": "성수동",
+      "type": {
+        "employment": "full-time",
+        "institution": "kindergarten"
+      },
+      "phone": "010-8480-2790",
+      "email": "sunshine@gmail.com",
+      "career": "experienced",
+      "salary": "협의",
+      "description": "서울 성동구 성수동에 위치한 햇살 어린이집 정교사선생님을 모집합니다.\n저희원과 함께하며 성장할수 있는 마음이 따뜻한 선생님을 모집합니다\n1. 지원자격\n 1) 보육교사 정교사 자격증 소지자\n 2) 2년제이상 대학 졸업자\n2. 제출서류\n 1) 이력서(사진부착)\n * 이력서와 자기소개서\n2) 제출방법: 이메일 접수(  fly-net@hanmail.net  )\n3. 모집구분\n만2세, 만3세, 만4세 각 한분씩 정담임교사\n4. 채용일정\n 1) 1차 서류전형 (개별연락)\n 2차 면접    \n * 접수된 서류는 반환되지 않습니다. (접수 서류는 폐기합니다.)\n5.출퇴근시간 오전 8시~오후 5시\n6.급여 면접시결정"
+    }
+  ]
+}
