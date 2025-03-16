@@ -1,6 +1,7 @@
 import React from 'react';
-import {StatusBar, Text, View} from 'react-native';
+import {StatusBar} from 'react-native';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+import RootStackNavigator from '@navigations/RootStackNavigator';
 
 const fullFlex = {
   flex: 1,
@@ -12,9 +13,7 @@ const App = () => {
     <SafeAreaProvider>
       <SafeAreaView style={fullFlex}>
         <StatusBar barStyle={'dark-content'} />
-        <View>
-          <Text>{'with T'}</Text>
-        </View>
+        <RootStackNavigator />
       </SafeAreaView>
     </SafeAreaProvider>
   );
