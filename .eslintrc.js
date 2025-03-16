@@ -1,0 +1,88 @@
+module.exports = {
+  root: true,
+  extends: [
+    '@react-native',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'prettier',
+    'plugin:prettier/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import', 'react-hooks', 'unused-imports'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/no-shadow': ['error'],
+        'no-shadow': 'off',
+        'no-undef': 'off',
+        'padding-line-between-statements': 'off',
+        'dot-notation': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/ban-ts-ignore': 'off',
+        '@typescript-eslint/indent': 'off',
+        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/explicit-member-accessibility': 0,
+        '@typescript-eslint/member-delimiter-style': 'off',
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/interface-name-prefix': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/naming-convention': [
+          'error',
+          {
+            selector: 'parameter',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+          },
+          {
+            selector: 'interface',
+            format: ['PascalCase'],
+            custom: {
+              regex: '^I[A-Z]',
+              match: false,
+            },
+          },
+        ],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        'react/prop-types': 'off',
+        'react-native/no-unused-styles': 1,
+        'react-native/no-single-element-style-arrays': 2,
+        'react-native/no-inline-styles': 0,
+        'react/jsx-no-bind': 'off',
+        'react/require-optimization': 2,
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
+        'no-useless-catch': 'off',
+        'import/no-unresolved': 'off',
+        'import/namespace': 'error',
+        'import/export': 'error',
+        'no-unused-vars': 'off',
+        'unused-imports/no-unused-imports': 'error',
+        'unused-imports/no-unused-vars': [
+          'warn',
+          {
+            vars: 'all',
+            varsIgnorePattern: '^_',
+            args: 'after-used',
+            argsIgnorePattern: '^_',
+          },
+        ],
+      },
+    },
+  ],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+  },
+};
