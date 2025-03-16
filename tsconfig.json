@@ -7,7 +7,14 @@
     "strictNullChecks": true,
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@controllers/*": ["controllers/*"],
+      "@components/*": ["components/*"],
+      "@screens/*": ["screens/*"],
+      "@utils": ["utils"],
+      "@hooks/*": ["hooks/*"],
+      "@constants/*": ["constants/*"],
+      "@navigations/*": ["navigations/*"]
     }
   }
 }
