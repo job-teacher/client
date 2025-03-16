@@ -2,14 +2,14 @@ import {StyleSheet, View} from 'react-native';
 import TabNavigator, {ScreenType} from '~/components/navigators/TabNavigator';
 import {Ko} from '~/constants/ko';
 
-interface HomeScreenProps {
+interface MyJobProps {
   onNavigationPress: (type: ScreenType) => void;
 }
 
-const HomeScreen = ({onNavigationPress}: HomeScreenProps) => {
+const WishJobScreen = ({onNavigationPress}: MyJobProps) => {
   return (
     <View style={styles.container}>
-      <TabNavigator active={Ko.Home} onNavigationPress={onNavigationPress} />
+      <TabNavigator active={Ko.WishJob} onNavigationPress={onNavigationPress} />
     </View>
   );
 };
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default WishJobScreen;

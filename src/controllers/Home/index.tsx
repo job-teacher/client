@@ -1,7 +1,10 @@
 import HomeScreen from '@screens/Home';
+import useHome from './hooks/useHome';
 
 const HomeController = () => {
-  return <HomeScreen />;
+  const {onNavigationHandler} = useHome();
+
+  return <HomeScreen onNavigationPress={onNavigationHandler} />;
 };
 
 export default HomeController;
