@@ -6,6 +6,20 @@ const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
  *
  * @type {import('@react-native/metro-config').MetroConfig}
  */
-const config = {};
+const config = {
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+      // babelTransformerPath 추가
+      babelTransformerPath: require.resolve('metro-react-native-babel-preset'),
+    }),
+  },
+  resolver: {
+    sourceExts: ['js', 'json', 'jsx', 'mjs', 'ts', 'tsx'],
+  },
+};
 
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);
