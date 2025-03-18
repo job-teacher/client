@@ -3,9 +3,12 @@ import {Ko} from '@constants/ko';
 import {screenName} from '@constants/screenName';
 import {useBackButtonForExit} from '@hooks/useBackButtonForExit';
 import {useNavigationFn} from '@hooks/useNavigationFn';
+import {useBaseModal} from '~/components/modals/BaseModal/hooks/useBaseModal';
 
 const useMyPage = () => {
   const navigation = useNavigationFn<screenName.MyPage>();
+  const modal = useBaseModal();
+
   useBackButtonForExit();
 
   const onNavigationHandler = (screen: ScreenType) => {
@@ -20,7 +23,11 @@ const useMyPage = () => {
     return;
   };
 
-  return {onNavigationHandler};
+  const onLoginHandler = () => {
+    modal.showModal();
+  };
+
+  return {onNavigationHandler, modal, onLoginHandler};
 };
 
 export default useMyPage;
