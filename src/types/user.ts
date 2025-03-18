@@ -1,5 +1,5 @@
 type UserType = 'employee' | 'employer';
-type LoginType = 'kakao' | 'naver' | 'google';
+type LoginType = 'kakao' | 'naver' | 'facebook' | 'apple';
 
 interface User {
   id: number;
