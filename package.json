@@ -57,5 +57,10 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "return-fetch"
+    ]
   }
 }
