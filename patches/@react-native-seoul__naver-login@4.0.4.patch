@@ -1,0 +1,79 @@
+diff --git a/android/src/main/java/com/dooboolab/naverlogin/PromiseUtils.kt b/android/src/main/java/com/dooboolab/naverlogin/PromiseUtils.kt
+index 345b7871538aaff350dbb2652ed5775e705bcf9a..490fbaadbcf8071e68e4b3149cf43e249dc736f2 100644
+--- a/android/src/main/java/com/dooboolab/naverlogin/PromiseUtils.kt
++++ b/android/src/main/java/com/dooboolab/naverlogin/PromiseUtils.kt
+@@ -1,7 +1,6 @@
+ package com.dooboolab.naverlogin
+ 
+ import android.util.Log
+-import com.facebook.react.bridge.ObjectAlreadyConsumedException
+ import com.facebook.react.bridge.Promise
+ 
+ /**
+@@ -14,7 +13,7 @@ const val TAG = "RNNaverLogin"
+ fun Promise.safeResolve(value: Any?) {
+     try {
+         this.resolve(value)
+-    } catch (oce: ObjectAlreadyConsumedException) {
++    } catch (oce: Exception) {
+         Log.d(TAG, "Already consumed ${oce.message}")
+     }
+ }
+@@ -40,7 +39,7 @@ fun Promise.safeReject(
+ ) {
+     try {
+         this.reject(code ?: "UNKNOWN_ERROR", message, throwable)
+-    } catch (oce: ObjectAlreadyConsumedException) {
++    } catch (oce: Exception) {
+         Log.d(TAG, "Already consumed ${oce.message}")
+     }
+ }
+diff --git a/android/src/main/java/com/dooboolab/naverlogin/RNNaverLoginModule.kt b/android/src/main/java/com/dooboolab/naverlogin/RNNaverLoginModule.kt
+index 00ea78fae7dfb462e8f09d7a258d4e9e91fe5dcd..d58b72be23fa7dcd3c6d4e6a56891ed644b16624 100644
+--- a/android/src/main/java/com/dooboolab/naverlogin/RNNaverLoginModule.kt
++++ b/android/src/main/java/com/dooboolab/naverlogin/RNNaverLoginModule.kt
+@@ -18,11 +18,12 @@ class RNNaverLoginModule(reactContext: ReactApplicationContext) : ReactContextBa
+     override fun getName() = "RNNaverLogin"
+ 
+     @ReactMethod
+-    fun logout(promise: Promise) =
++    fun logout(promise: Promise) {
+         UiThreadUtil.runOnUiThread {
+             callLogout()
+             promise.safeResolve(null)
+         }
++    }
+ 
+     private fun callLogout() =
+         try {
+@@ -46,7 +47,7 @@ class RNNaverLoginModule(reactContext: ReactApplicationContext) : ReactContextBa
+     }
+ 
+     @ReactMethod
+-    fun login(promise: Promise) =
++    fun login(promise: Promise) {
+         UiThreadUtil.runOnUiThread {
+             loginPromise = promise
+             if (currentActivity == null) {
+@@ -80,9 +81,10 @@ class RNNaverLoginModule(reactContext: ReactApplicationContext) : ReactContextBa
+                 onLoginFailure(je.localizedMessage)
+             }
+         }
++    }
+ 
+     @ReactMethod
+-    fun deleteToken(promise: Promise) =
++    fun deleteToken(promise: Promise) {
+         UiThreadUtil.runOnUiThread {
+             NidOAuthLogin().callDeleteTokenApi(
+                 object : OAuthLoginCallback {
+@@ -100,7 +102,8 @@ class RNNaverLoginModule(reactContext: ReactApplicationContext) : ReactContextBa
+                 },
+             )
+         }
+-
++    }
++    
+     companion object {
+         private var loginPromise: Promise? = null
+ 
