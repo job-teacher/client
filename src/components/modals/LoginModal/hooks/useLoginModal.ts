@@ -1,14 +1,15 @@
+import {kakaoLogin} from '~/utils/socialLogin';
 import {ModalProps} from '../../BaseModal/hooks/useBaseModal';
 
 type LoginType = 'kakao' | 'naver' | 'facebook' | 'apple';
 
 export const useLoginModal = (modal: ModalProps) => {
   const onLoginHandler = async (loginType: LoginType) => {
-    let token: string | null = null;
-
     switch (loginType) {
       case 'kakao':
-        console.log(`${loginType}으로 로그인`);
+        const kakaoToken = await kakaoLogin();
+
+        console.log('kakaoToken', kakaoToken);
         break;
 
       case 'naver':
