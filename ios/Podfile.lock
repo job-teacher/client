@@ -39,6 +39,7 @@ PODS:
   - libwebp/sharpyuv (1.5.0)
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
+  - naveridlogin-sdk-ios (4.2.3)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1626,7 +1627,7 @@ PODS:
     - React-logger (= 0.78.0)
     - React-perflogger (= 0.78.0)
     - React-utils (= 0.78.0)
-  - RNCKakaoCore (2.2.6):
+  - RNCKakaoCore (2.3.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1648,7 +1649,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNCKakaoUser (2.2.6):
+  - RNCKakaoUser (2.3.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1696,6 +1697,28 @@ PODS:
     - SDWebImage (>= 5.19.1)
     - SDWebImageAVIFCoder (~> 0.11.0)
     - SDWebImageWebPCoder (~> 0.14)
+    - Yoga
+  - RNNaverLogin (4.0.4):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - naveridlogin-sdk-ios (= 4.2.3)
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
     - Yoga
   - RNScreens (4.9.2):
     - DoubleConversion
@@ -1828,6 +1851,7 @@ DEPENDENCIES:
   - "RNCKakaoCore (from `../node_modules/@react-native-kakao/core`)"
   - "RNCKakaoUser (from `../node_modules/@react-native-kakao/user`)"
   - "RNFastImage (from `../node_modules/@d11/react-native-fast-image`)"
+  - "RNNaverLogin (from `../node_modules/@react-native-seoul/naver-login`)"
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1840,6 +1864,7 @@ SPEC REPOS:
     - libavif
     - libdav1d
     - libwebp
+    - naveridlogin-sdk-ios
     - SDWebImage
     - SDWebImageAVIFCoder
     - SDWebImageWebPCoder
@@ -1989,6 +2014,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-kakao/user"
   RNFastImage:
     :path: "../node_modules/@d11/react-native-fast-image"
+  RNNaverLogin:
+    :path: "../node_modules/@react-native-seoul/naver-login"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   Yoga:
@@ -2010,6 +2037,7 @@ SPEC CHECKSUMS:
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
+  naveridlogin-sdk-ios: d9d46d02119d303023d7000cd5963864d5bb89e5
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: b2eecf2d60216df56bc5e6be5f063826d3c1ee35
   RCTRequired: 78522de7dc73b81f3ed7890d145fa341f5bb32ea
@@ -2070,9 +2098,10 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: f2e81d80afd71a8058589e19d8a134243fa53f17
   ReactCodegen: a63a0ab6ae824aef2e8c744981edd718b16eb9f2
   ReactCommon: 3d39389f8e2a2157d5c999f8fba57bd1c8f226f0
-  RNCKakaoCore: 938f3eddd0affc577502fb360d1f8146cd064f60
-  RNCKakaoUser: edc7c1395882db98fc4f6afb513a0e71567ff0af
+  RNCKakaoCore: 344fc334d05feeeb0068df4145939121a159807c
+  RNCKakaoUser: 628f9a842fed82ceda5211c4b84905d88f2c4fa0
   RNFastImage: a28d24ed0a1e9807da556efef0630b71c1a9a78a
+  RNNaverLogin: e5bc84846caac678de94a9fc902fcb0166a4d13f
   RNScreens: 9a887b38fbb9c207f0d4e9694037c91e4fd6b248
   SDWebImage: f84b0feeb08d2d11e6a9b843cb06d75ebf5b8868
   SDWebImageAVIFCoder: 00310d246aab3232ce77f1d8f0076f8c4b021d90

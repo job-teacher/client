@@ -2,10 +2,10 @@ declare module 'react-native-config' {
   export interface NativeConfig {
     KAKAO_APP_KEY?: string;
     KAKAO_SCHEME?: string;
-    NAVER_CONSUMER_KEY?: string;
-    NAVER_CONSUMER_SECRET?: string;
     NAVER_APP_NAME?: string;
-    NAVER_CUSTOM_URL?: string;
+    NAVER_Client_ID?: string;
+    NAVER_Client_SECRET?: string;
+    NAVER_SCHEME?: string;
     FACEBOOK_APP_ID?: string;
     FACEBOOK_CLIENT_TOKEN?: string;
   }

@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@react-native-seoul/naver-login@4.0.4':
+    hash: 96b24bce4a2948aa822c4720b4c0fe7cd81fbe86d13cbd37c08a753e5c174e03
+    path: patches/@react-native-seoul__naver-login@4.0.4.patch
+
 importers:
 
   .:
@@ -17,6 +22,9 @@ importers:
       '@react-native-kakao/user':
         specifier: ^2.3.0
         version: 2.3.0(@react-native-kakao/core@2.3.0(react-native@0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0))(react@19.0.0))(react-native@0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
+      '@react-native-seoul/naver-login':
+        specifier: ^4.0.4
+        version: 4.0.4(patch_hash=96b24bce4a2948aa822c4720b4c0fe7cd81fbe86d13cbd37c08a753e5c174e03)(react-native@0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
       '@react-navigation/native':
         specifier: ^7.0.15
         version: 7.0.17(react-native@0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
@@ -1128,6 +1136,12 @@ packages:
       react: '*'
       react-native: '*'
 
+  '@react-native-seoul/naver-login@4.0.4':
+    resolution: {integrity: sha512-85+HirUEydaNP02HtKFRskBklN+6SERPE9AdYOjsesq+8YgSYMHGD92NdCytmTOw9dyHeut/wvBhC9V/VR+ScQ==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
   '@react-native/assets-registry@0.78.0':
     resolution: {integrity: sha512-PPHlTRuP9litTYkbFNkwveQFto3I94QRWPBBARU0cH/4ks4EkfCfb/Pdb3AHgtJi58QthSHKFvKTQnAWyHPs7w==}
     engines: {node: '>=18'}
@@ -2099,6 +2113,10 @@ packages:
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
+
+  dooboolab-welcome@1.3.2:
+    resolution: {integrity: sha512-2NbMaIIURElxEf/UAoVUFlXrO+7n/FRhLCiQlk4fkbGRh9cJ3/f8VEMPveR9m4Ug2l2Zey+UCXjd6EcBqHJ5bw==}
+    hasBin: true
 
   dot-prop@9.0.0:
     resolution: {integrity: sha512-1gxPBJpI/pcjQhKgIU91II6Wkay+dLcN3M6rf2uwP8hRur3HtQXjVrdAK3sjC0piaEuxzMwjXChcETiJl47lAQ==}
@@ -5717,6 +5735,12 @@ snapshots:
       react: 19.0.0
       react-native: 0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0)
 
+  '@react-native-seoul/naver-login@4.0.4(patch_hash=96b24bce4a2948aa822c4720b4c0fe7cd81fbe86d13cbd37c08a753e5c174e03)(react-native@0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      dooboolab-welcome: 1.3.2
+      react: 19.0.0
+      react-native: 0.78.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@react-native-community/cli-server-api@15.0.1)(@types/react@19.0.12)(react@19.0.0)
+
   '@react-native/assets-registry@0.78.0': {}
 
   '@react-native/babel-plugin-codegen@0.78.0(@babel/preset-env@7.26.9(@babel/core@7.26.10))':
@@ -6929,6 +6953,8 @@ snapshots:
   doctrine@2.1.0:
     dependencies:
       esutils: 2.0.3
+
+  dooboolab-welcome@1.3.2: {}
 
   dot-prop@9.0.0:
     dependencies:
