@@ -79,3 +79,7 @@ yarn-error.log
 
 # react-native-config codegen
 ios/tmp.xcconfig
+
+# google-services
+ios/GoogleService-Info.plist
+android/app/google-services.json
