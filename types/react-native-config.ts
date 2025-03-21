@@ -6,8 +6,9 @@ declare module 'react-native-config' {
     NAVER_Client_ID?: string;
     NAVER_Client_SECRET?: string;
     NAVER_SCHEME?: string;
-    FACEBOOK_APP_ID?: string;
-    FACEBOOK_CLIENT_TOKEN?: string;
+    GOOGLE_IOS_CLIENT_ID?: string;
+    GOOGLE_REVERSED_CLIENT_ID?: string;
+    GOOGLE_WEB_CLIENT_ID?: string;
   }
 
   export const Config: NativeConfig;

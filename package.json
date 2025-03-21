@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@d11/react-native-fast-image": "^8.9.2",
+    "@react-native-google-signin/google-signin": "^13.2.0",
     "@react-native-kakao/core": "^2.3.0",
     "@react-native-kakao/user": "^2.3.0",
     "@react-native-seoul/naver-login": "^4.0.4",

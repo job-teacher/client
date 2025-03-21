@@ -5,6 +5,6 @@ export const Images = {
 
   KakaoIcon: require('@assets/icons/Kakao.png'),
   NaverIcon: require('@assets/icons/Naver.png'),
-  FacebookIcon: require('@assets/icons/Facebook.png'),
+  GoogleIcon: require('@assets/icons/Google.png'),
   AppleIcon: require('@assets/icons/Apple.png'),
 };

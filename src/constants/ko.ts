@@ -13,6 +13,6 @@ export const enum Ko {
   /* Login Modal */
   LoginWithKakao = '카카오로 로그인',
   LoginWithNaver = '네이버로 로그인',
-  LoginWithFacebook = '페이스북으로 로그인',
-  LoginWithApple = '애플로 로그인',
+  LoginWithGoogle = 'Google로 로그인',
+  LoginWithApple = 'Apple로 로그인',
 }

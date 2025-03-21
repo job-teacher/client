@@ -1,3 +1,4 @@
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import kakao, {KakaoLoginToken} from '@react-native-kakao/user';
 import naver from '@react-native-seoul/naver-login';
 
@@ -25,6 +26,22 @@ export const naverLogin = async (): Promise<string | null> => {
       return null;
     }
   } catch (error) {
+    return null;
+  }
+};
+
+export const googleLogin = async (): Promise<string | null> => {
+  try {
+    const result = await GoogleSignin.signIn();
+
+    if (result.type === 'success') {
+      return result.data?.idToken;
+    } else {
+      console.log('google login cancelled');
+      return null;
+    }
+  } catch (error) {
+    console.log(error);
     return null;
   }
 };

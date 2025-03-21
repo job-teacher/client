@@ -27,7 +27,7 @@ const LoginModal = ({modalProps}: LoginModalProps) => {
         return {
           backgroundColor: Colors.WHITE,
         };
-      case 'facebook':
+      case 'google':
         return {
           backgroundColor: Colors.WHITE,
         };
@@ -64,14 +64,14 @@ const LoginModal = ({modalProps}: LoginModalProps) => {
             <Text style={styles.text}>{Ko.LoginWithNaver}</Text>
           </ThrottleButton>
           <ThrottleButton
-            style={[styles.loginBtn, btnStyles('facebook')]}
-            onPress={() => onLoginHandler('facebook')}>
+            style={[styles.loginBtn, btnStyles('google')]}
+            onPress={() => onLoginHandler('google')}>
             <FastImage
               style={styles.icon}
-              source={Images.FacebookIcon}
+              source={Images.GoogleIcon}
               resizeMode={'contain'}
             />
-            <Text style={styles.text}>{Ko.LoginWithFacebook}</Text>
+            <Text style={styles.text}>{Ko.LoginWithGoogle}</Text>
           </ThrottleButton>
           {Platform.OS === 'ios' && (
             <ThrottleButton

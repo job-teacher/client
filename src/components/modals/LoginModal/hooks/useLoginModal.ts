@@ -1,7 +1,7 @@
-import {kakaoLogin, naverLogin} from '~/utils/socialLogin';
+import {googleLogin, kakaoLogin, naverLogin} from '~/utils/socialLogin';
 import {ModalProps} from '../../BaseModal/hooks/useBaseModal';
 
-type LoginType = 'kakao' | 'naver' | 'facebook' | 'apple';
+type LoginType = 'kakao' | 'naver' | 'google' | 'apple';
 
 export const useLoginModal = (modal: ModalProps) => {
   const onLoginHandler = async (loginType: LoginType) => {
@@ -18,8 +18,10 @@ export const useLoginModal = (modal: ModalProps) => {
         console.log('naverToken', naverToken);
         break;
 
-      case 'facebook':
-        console.log(`${loginType}으로 로그인`);
+      case 'google':
+        const googleToken = await googleLogin();
+
+        console.log('googleToken', googleToken);
         break;
 
       case 'apple':

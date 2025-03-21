@@ -9,5 +9,6 @@
 #define withT_Bridging_Header_h
 
 #import "RNCConfig.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 
 #endif /* withT_Bridging_Header_h */

@@ -4,6 +4,7 @@ import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import RootStackNavigator from '@navigations/RootStackNavigator';
 import '@utils/kakao';
 import '@utils/naver';
+import '@utils/google';
 
 const fullFlex = {
   flex: 1,
