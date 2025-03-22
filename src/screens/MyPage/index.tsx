@@ -8,7 +8,7 @@ import {
 import {ModalProps} from '@components/modals/BaseModal/hooks/useBaseModal';
 import TabNavigator, {ScreenType} from '@components/navigators/TabNavigator';
 import {Ko} from '@constants/ko';
-import BaseModal from '~/components/modals/BaseModal';
+import LoginModal from '~/components/modals/LoginModal';
 
 interface MyPageProps {
   onLoginModal: () => void;
@@ -27,7 +27,7 @@ const MyPageScreen = ({
         <Text>{'모달 띄우기'}</Text>
       </TouchableOpacity>
       <TabNavigator active={Ko.MyPage} onNavigationPress={onNavigationPress} />
-      <BaseModal content={<View></View>} modalProps={modalProps} />
+      <LoginModal modalProps={modalProps} />
     </View>
   );
 };

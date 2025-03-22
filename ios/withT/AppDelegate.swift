@@ -2,6 +2,8 @@ import UIKit
 import React
 import React_RCTAppDelegate
 import ReactAppDependencyProvider
+import RNCKakaoUser
+import NaverThirdPartyLogin
 
 @main
 class AppDelegate: RCTAppDelegate {
@@ -18,6 +20,26 @@ class AppDelegate: RCTAppDelegate {
 
   override func sourceURL(for bridge: RCTBridge) -> URL? {
     self.bundleURL()
+  }
+
+  override func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    let naverScheme = RNCConfig.env(for: "NAVER_SCHEME")
+    let gooogleScheme = RNCConfig.env(for: "GOOGLE_REVERSED_CLIENT_ID")
+    
+    if (RNCKakaoUserUtil.isKakaoTalkLoginUrl(url)) {
+      return RNCKakaoUserUtil.handleOpen(url);
+    }
+
+    if url.scheme == naverScheme {
+      return NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)
+    }
+    
+    if url.scheme == gooogleScheme {
+      return GIDSignIn.sharedInstance.handle(url)
+    }
+
+
+    return false
   }
 
   override func bundleURL() -> URL? {

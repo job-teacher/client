@@ -9,4 +9,10 @@ export const enum Ko {
 
   /* BackButton Toast Message */
   BackButtonToast = '뒤로 버튼을 한번 더 누르시면 앱이 종료됩니다',
+
+  /* Login Modal */
+  LoginWithKakao = '카카오로 로그인',
+  LoginWithNaver = '네이버로 로그인',
+  LoginWithGoogle = 'Google로 로그인',
+  LoginWithApple = 'Apple로 로그인',
 }
