@@ -45,3 +45,34 @@ export const googleLogin = async (): Promise<string | null> => {
     return null;
   }
 };
+
+// export const appleLogin = async (): Promise<string | null> => {
+// try {
+//   const appleAuthRequestResponse = await appleAuth.performRequest({
+//     requestedOperation: appleAuth.Operation.LOGIN,
+//     requestedScopes: [appleAuth.Scope.FULL_NAME, appleAuth.Scope.EMAIL],
+//   });
+
+//   const credentialState = await appleAuth.getCredentialStateForUser(
+//     appleAuthRequestResponse.user,
+//   );
+
+//   if (credentialState === appleAuth.State.AUTHORIZED) {
+//     return appleAuthRequestResponse.identityToken;
+//   } else if (credentialState === appleAuth.State.NOT_FOUND) {
+//     console.log('not Found User');
+//     return null;
+//   } else if (credentialState === appleAuth.State.REVOKED) {
+//     console.log('revoked user');
+//     return null;
+//   } else {
+//     console.log('TRANSFERRED');
+//     return null;
+//   }
+// } catch (err) {
+//   console.log(err);
+
+//   return null;
+// }
+//   retrun null
+// };
