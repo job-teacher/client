@@ -11,23 +11,20 @@ import {Ko} from '@constants/ko';
 import LoginModal from '~/components/modals/LoginModal';
 
 interface MyPageProps {
-  onLoginModal: () => void;
   modalProps: ModalProps;
+  onHideModal: () => void;
   onNavigationPress: (type: ScreenType) => void;
 }
 
 const MyPageScreen = ({
-  onLoginModal,
   modalProps,
+  onHideModal,
   onNavigationPress,
 }: MyPageProps) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={onLoginModal}>
-        <Text>{'모달 띄우기'}</Text>
-      </TouchableOpacity>
       <TabNavigator active={Ko.MyPage} onNavigationPress={onNavigationPress} />
-      <LoginModal modalProps={modalProps} />
+      <LoginModal onHideModal={onHideModal} modalProps={modalProps} />
     </View>
   );
 };
