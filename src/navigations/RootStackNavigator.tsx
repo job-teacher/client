@@ -38,7 +38,7 @@ const RootStackNavigator = () => {
         <RootStack.Screen
           name={screenName.MyPage}
           component={MyPageController}
-          options={{gestureEnabled: false}}
+          options={{gestureEnabled: false, animation: 'default'}}
         />
       </RootStack.Navigator>
     </NavigationContainer>

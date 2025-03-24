@@ -3,10 +3,13 @@ import {Ko} from '@constants/ko';
 import {screenName} from '@constants/screenName';
 import {useBackButtonForExit} from '@hooks/useBackButtonForExit';
 import {useNavigationFn} from '@hooks/useNavigationFn';
+import {useCallback, useEffect} from 'react';
 import {useBaseModal} from '~/components/modals/BaseModal/hooks/useBaseModal';
+import useUserStore from '~/stores/users';
 
 const useMyPage = () => {
   const navigation = useNavigationFn<screenName.MyPage>();
+  const {user, setUser} = useUserStore();
   const modal = useBaseModal();
 
   useBackButtonForExit();
@@ -23,11 +26,17 @@ const useMyPage = () => {
     return;
   };
 
-  const onLoginHandler = () => {
-    modal.showModal();
-  };
+  const onHideModal = useCallback(() => {
+    navigation.goBack();
+  }, []);
 
-  return {onNavigationHandler, modal, onLoginHandler};
+  useEffect(() => {
+    if (!user.id) {
+      modal.showModal();
+    }
+  }, []);
+
+  return {modal, onHideModal, onNavigationHandler};
 };
 
 export default useMyPage;

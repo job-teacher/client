@@ -11,10 +11,11 @@ import {Colors} from '~/constants/theme';
 import ThrottleButton from '~/components/buttons/ThrottleButton';
 
 interface LoginModalProps {
+  onHideModal: () => void;
   modalProps: ModalProps;
 }
 
-const LoginModal = ({modalProps}: LoginModalProps) => {
+const LoginModal = ({onHideModal, modalProps}: LoginModalProps) => {
   const {onLoginHandler} = useLoginModal(modalProps);
 
   const btnStyles = useCallback((loginType: LoginType) => {
@@ -40,6 +41,7 @@ const LoginModal = ({modalProps}: LoginModalProps) => {
 
   return (
     <BaseModal
+      onHideModal={onHideModal}
       content={
         <View style={styles.container}>
           <Text style={styles.title}>{Ko.WithTeacher}</Text>

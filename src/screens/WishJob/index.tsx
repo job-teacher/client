@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import TabNavigator, {ScreenType} from '~/components/navigators/TabNavigator';
 import {Ko} from '~/constants/ko';
 
@@ -9,6 +9,7 @@ interface MyJobProps {
 const WishJobScreen = ({onNavigationPress}: MyJobProps) => {
   return (
     <View style={styles.container}>
+      <Text>{'위시리스트'}</Text>
       <TabNavigator active={Ko.WishJob} onNavigationPress={onNavigationPress} />
     </View>
   );

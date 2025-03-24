@@ -24,6 +24,8 @@ module.exports = {
           '@utils': './src/utils',
           '@controllers': './src/controllers',
           '@screens': './src/screens',
+          '@stores': './src/stores',
+          '@types': './src/types',
           '@hooks': './src/hooks',
         },
       },
