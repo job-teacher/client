@@ -8,7 +8,15 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "json": "json-server --watch db.json"
+    "json": "json-server --watch db.json",
+    "android:dev-debug": "react-native run-android --mode=devdebug",
+    "android:dev-release": "react-native run-android --mode=devrelease",
+    "android:prd-debug": "react-native run-android --mode=productdebug",
+    "android:prd-release": "react-native run-android --mode=productrelease",
+    "ios:dev-debug": "react-native run-ios --scheme Dev --mode Debug",
+    "ios:dev-release": "react-native run-ios --scheme Dev --mode Release",
+    "ios:prd-debug": "react-native run-ios --scheme Production --mode Debug",
+    "ios:prd-release": "react-native run-ios --scheme Production --mode Release"
   },
   "dependencies": {
     "@d11/react-native-fast-image": "^8.9.2",

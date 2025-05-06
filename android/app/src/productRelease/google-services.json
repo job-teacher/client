@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "246609199749",
+    "project_id": "withteacher-fccae",
+    "storage_bucket": "withteacher-fccae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246609199749:android:e7ca8f122868b51bc79fec",
+        "android_client_info": {
+          "package_name": "com.witht"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246609199749-4ejj87cqd65k8kc6lilnh5qrmni2csh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.witht",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "246609199749-r35aa0gfnhu9estt75gupc5odem5222m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSwN6lspn9CiD2CvqoRqIZmcMBfOtVMco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246609199749-r35aa0gfnhu9estt75gupc5odem5222m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "246609199749-f014g1i1fiv030islmb4jsf7g8605g3r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.withT"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
