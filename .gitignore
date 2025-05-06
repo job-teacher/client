@@ -76,6 +76,7 @@ yarn-error.log
 
 # env
 .env
+.env.dev
 
 # react-native-config codegen
 ios/tmp.xcconfig
